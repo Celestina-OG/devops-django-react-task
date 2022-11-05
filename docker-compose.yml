@@ -1,0 +1,11 @@
+services:
+  api:
+    image: celestina16/hng-backend
+    restart: always
+  frontend:
+    image: celestina16/hng-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+    restart: always
